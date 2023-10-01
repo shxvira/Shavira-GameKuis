@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Game Kuis/Scenes/Start Menu.unity
+    guid: 885fda7d078cf724cb97dd72b4df7d1e
+  - enabled: 1
+    path: Assets/Game Kuis/Scenes/Menu Pilih Level.unity
+    guid: 175dab4fb6c684f4bb2298da8b74ccfc
+  - enabled: 1
+    path: Assets/Game Kuis/Scenes/Gameplay.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
