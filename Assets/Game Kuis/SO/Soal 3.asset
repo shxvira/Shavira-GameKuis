@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17aa876098910674db4f0c399b68672c, type: 3}
   m_Name: Soal 3
   m_EditorClassIdentifier: 
-  pertanyaan: Apa Warna Laut?
-  petunjukJawaban: {fileID: 21300000, guid: c79e570a53a67934a95f749c68ba859d, type: 3}
+  pertanyaan: Apa Warna Daun?
+  petunjukJawaban: {fileID: 21300000, guid: 3820a0dd12e9b774aaf2fae9fe723500, type: 3}
+  levelPackIndex: 0
   opsiJawaban:
-  - jawabanTeks: Hitam
+  - jawabanTeks: Merah
     adalahBenar: 0
   - jawabanTeks: Biru
-    adalahBenar: 1
-  - jawabanTeks: Putih
     adalahBenar: 0
+  - jawabanTeks: Hijau
+    adalahBenar: 1
   - jawabanTeks: Kuning
     adalahBenar: 0

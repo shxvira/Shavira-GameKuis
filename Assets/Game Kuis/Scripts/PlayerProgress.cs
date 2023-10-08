@@ -16,22 +16,31 @@ public class PlayerProgress : ScriptableObject
     }
 
     [SerializeField]
-    private string _filename = "contoh.txt";
+    private string _filename = "progres.txt";
+
+    [SerializeField]
+    private string _startingLevelPackName = string.Empty;
 
     public MainData progressData = new MainData();
 
     public void SimpanProgress()
     {
-        // Sampel Data
-        progressData.koin = 200;
+        // Simpan Starting Data saat objek Dictionary tidak ada saat dimuat
         if (progressData.progressLevel == null)
+        {
             progressData.progressLevel = new();
-        progressData.progressLevel.Add("Level Pack 1", 3);
-        progressData.progressLevel.Add("Level Pack 3", 5);
+            progressData.koin = 0;
+            progressData.progressLevel.Add(_startingLevelPackName, 1);
+        }
 
         // Informasi penyimpanan data
+#if UNITY_EDITOR
         var directory = Application.dataPath + "/Temporary";
-        var path = directory + "/" + _filename;
+#elif (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
+        string directory = Application.persistentDataPath + "/ProgresLokal/";
+#endif
+
+        string path = directory + "/" + _filename;
 
         // Membuat Directory Temporary
         if (!Directory.Exists(directory))
@@ -73,7 +82,11 @@ public class PlayerProgress : ScriptableObject
     public bool MuatProgress()
     {
         // Informasi penyimpanan data
+#if UNITY_EDITOR
         var directory = Application.dataPath + "/Temporary";
+#elif (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
+        string directory = Application.persistentDataPath + "/ProgresLokal/";
+#endif
         var path = directory + "/" + _filename;
 
         var fileStream = File.Open(path, FileMode.OpenOrCreate);

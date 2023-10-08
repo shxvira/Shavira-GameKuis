@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17aa876098910674db4f0c399b68672c, type: 3}
   m_Name: Soal 4
   m_EditorClassIdentifier: 
-  pertanyaan: Apa Warna Langit?
-  petunjukJawaban: {fileID: 21300000, guid: d17cf516ff6dd1543a4cc8f0c414c3f6, type: 3}
+  pertanyaan: Apa Warna Matahari?
+  petunjukJawaban: {fileID: 21300000, guid: 3da7c6f699a7c5e44b4ef21ac53612fc, type: 3}
+  levelPackIndex: 0
   opsiJawaban:
-  - jawabanTeks: Hitam
+  - jawabanTeks: Merah
     adalahBenar: 0
-  - jawabanTeks: Abu-abu
+  - jawabanTeks: Biru
     adalahBenar: 0
-  - jawabanTeks: Jingga
+  - jawabanTeks: Hijau
     adalahBenar: 0
-  - jawabanTeks: Biru Muda
+  - jawabanTeks: Kuning
     adalahBenar: 1
